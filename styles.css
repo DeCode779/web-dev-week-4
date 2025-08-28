@@ -1,0 +1,83 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header - Flexbox for logo and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* main content + sidebar */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Content Section */
+.content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+/* Sidebar Section */
+.sidebar {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+/* Footer - Flexbox for alignment */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+        /* adjust column sizes for tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* stack content and sidebar for mobile */
+    }
+
+    header .nav-links {
+        margin-top: 10px;
+    }
+}
